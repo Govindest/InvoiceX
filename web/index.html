@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>InvoiceX MVP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>InvoiceX AI</h1>
+    <p>Upload an invoice PDF to see it parsed in seconds.</p>
+
+    <form id="upload-form">
+      <input type="file" id="invoice-file" accept=".pdf" />
+      <button type="submit">Upload &amp; Parse</button>
+    </form>
+
+    <div id="status" class="hidden">
+      <p><strong>Status:</strong> <span id="status-text">Waiting for upload...</span></p>
+    </div>
+
+    <div id="result" class="hidden">
+      <h2>Parsed Data</h2>
+      <pre id="parsed-json"></pre>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
